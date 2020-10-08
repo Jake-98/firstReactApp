@@ -2,7 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 
 //CSS
-
+import "./index.css"; // (.) indicates file is in the same folder
 
 // this is a component
 // function Greeting() {
@@ -10,7 +10,11 @@ import ReactDom from "react-dom";
 // }
 function BookList() {
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
@@ -18,15 +22,18 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
-      <Image />
-      <Title />
-      <Author />
+    <article className='book'>
+      <Image className='' />
+      <Title className='' />
+      <Author className='' />
     </article>
   );
 };
 const Image = () => (
-  <img src='https://images-na.ssl-images-amazon.com/images/I/A1XyS0D1S-L._AC_UL200_SR200,200_.jpg'></img>
+  <img
+    src='https://images-na.ssl-images-amazon.com/images/I/A1XyS0D1S-L._AC_UL200_SR200,200_.jpg'
+    alt='Room on the broom'
+  ></img>
 );
 
 const Title = () => <h1>Room on the Broom</h1>;
