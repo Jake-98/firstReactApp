@@ -22,10 +22,10 @@ const Book = ({ img, title, author }) => {
    <h1 onClick={() => console.log(title)}>{title}</h1>
    <h4>{author}</h4>
    <button type='button' onClick={clickHandler}>
-    reference example
+    Reference Example
       </button>
    <button type='button' onClick={() => complexExample(author)}>
-    more complex example
+    Complex Example
       </button>
   </article>
  );
